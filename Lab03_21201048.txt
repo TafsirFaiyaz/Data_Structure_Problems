@@ -1,7 +1,3 @@
-#Name:Tafsir Ahmed Faiyaz
-#ID:21201048
-#Sec:16
-
 
 class LinkedList:
   
@@ -165,7 +161,7 @@ class LinkedList:
   # inserts Node containing the given element at the given index
   # Check validity of index.
     def insert(self, elem, idx):
-        if idx<0 or idx>self.count:
+        if idx<0 or idx>self.countnode():
             return None
         
         if idx==0:
@@ -184,7 +180,7 @@ class LinkedList:
   # removes Node at the given index. returns element of the removed node.
   # Check validity of index. return None if index is invalid.
     def remove(self, idx):
-        if idx<0 or idx>=self.count:
+        if idx<0 or idx>=self.countnode():
             return None
         
         if idx==0:
