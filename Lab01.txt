@@ -1,6 +1,3 @@
-﻿#Name: Tafsir Ahmed Faiyaz
-#ID: 21201048
-#Sec:16
 
 #Task-1
 
