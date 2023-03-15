@@ -1,0 +1,270 @@
+﻿#Name: Tafsir Ahmed Faiyaz
+#ID: 21201048
+#Sec:16
+
+#Task-1
+
+def ek_ghor_shift(x): 
+    
+    for i in range(len(x)-1):
+        temp=x[i]
+        x[i]=x[i+1]
+        x[i+1]=0
+        
+    return x
+
+def shiftLeft(source,k):
+    if k<0:
+        return "invalid input"
+    
+    else:
+        for i in range(k):
+            ek_ghor_shift(source)
+        return source
+    
+source=[10,20,30,40,50,60]
+shiftLeft(source,3)
+print(source)
+
+#Task-2
+
+def ek_ghor_shift(x): 
+    
+    for i in range(len(x)-1):
+        temp=x[i]
+        x[i]=x[i+1]
+        x[i+1]=temp
+        
+    return x
+
+def rotateLeft(source,k):
+    if k<0:
+        return "invalid input"
+    
+    else:
+        for i in range(k):
+            ek_ghor_shift(source)
+        return source
+
+source=[10,20,30,40,50,60]
+rotateLeft(source,3)
+print(source)
+
+#Task-3
+
+
+def ek_ghor_shift(source):
+    for i in range(len(source)-1,0,-1):
+        
+        source[i]=source[i-1]
+        source[i-1]=0
+    
+def shiftRight(source,k):
+    if k<0:
+        return "Invalid input"
+    
+    else:
+        for i in range(k):
+            ek_ghor_shift(source)
+        return source
+    
+source=[10,20,30,40,50,60]
+shiftRight(source,3)
+print(source)
+
+
+
+#Taks-4
+def ek_ghor_shift(source):
+    
+    for i in range(len(source)-1,0,-1):
+        temp=source[i-1]
+        source[i-1]=source[i]
+        source[i]=temp
+    
+def rotateRight(source,k):
+    
+    if k<0:
+        return "Invalid input"
+    
+    else:
+        for i in range(k):
+            ek_ghor_shift(source)
+            
+        return source
+source=[10,20,30,40,50,60]
+rotateRight(source,3)
+print(source)
+
+
+#Task-5
+
+
+
+def remove(source,y,idx):
+    if idx>len(source)-1:
+        return "invalid input"
+    
+    
+    source[idx]=0
+    
+    for idx in range(idx,len(source)-1):
+        temp=source[idx]
+        
+        source[idx]=source[idx+1]
+        
+        source[idx+1]=temp
+    return source
+
+source=[10,20,30,40,50,0,0]
+remove(source,5,2)
+print(source)
+
+
+
+#Task-6
+
+
+
+def remove(source,idx):
+    source[idx]=0
+    for idx in range(idx,len(source)-1):
+        temp=source[idx]
+        
+        source[idx]=source[idx+1]
+        
+        source[idx+1]=temp
+    return source
+
+def removeall(source,size,val):
+    count=0
+    while count<size:
+        
+        
+        if source[count]==val:
+            
+            remove(source,count)
+           
+            count-=1
+            
+        count+=1
+        
+            
+    return source
+
+source=[10,2,30,2,50,2,2,0,0]
+removeall(source,5,2)
+print(source)
+
+
+
+#Taks-7
+
+def balance(source):
+    
+    sum1=0
+    output=False
+    
+    for lpan in range(len(source)-1):
+        sum1+=source[lpan]
+        sum2=0
+        
+        for rpan in range(len(source)-1,lpan,-1):
+            sum2+=source[rpan]
+           
+        if sum1==sum2:
+            output=True
+            break
+            
+    return output
+        
+source= [1, 1, 1, 2, 1]
+print(balance(source))
+
+
+        
+#task-8
+def Array_series(n):
+    
+    st=""
+    x=[0]*n*n
+    for i in range(1,4):
+    
+        st+="0"*(n-i)
+        
+        for j in range(i,0,-1):
+            
+            st+=f"{j}"
+            
+    for i in range(len(st)):
+        x[i]=int(st[i])
+    return(x)
+
+print(Array_series(4))
+
+
+
+#Task 9
+
+def maxbunch(source):
+    
+    count=1
+    max=0
+    
+    for element in range(1,len(source)):
+        
+        if source[element]==source[element-1]:
+            count+=1
+            
+            if max<count:
+                max=count
+                
+                
+        else:
+            count=1
+    if len(source)==1:
+        max=1
+ 
+    return max
+    
+source= [1, 2, 2, 3, 4, 4, 4]
+print(maxbunch(source))
+
+    
+    
+        
+        
+        
+#Task10
+
+def Repetition(source):
+    output=False
+    dic={}
+    
+    for i in source:
+        if i not in dic:
+            dic[i]=1
+        else:
+            dic[i]+=1
+    
+    temp=[0]*len(dic)
+    
+    i=0
+    
+    
+    for j in dic.values():
+        temp[i]=j
+        i+=1
+   
+    for val1 in range(len(temp)-1):
+        for val2 in range(val1+1,len(temp)):
+            if temp[val1]!=1:
+                if temp[val1]==temp[val2]:
+                    output=True
+                
+    
+    return output
+
+source=[3,4,6,3,4,7,4,6,8,6,6]
+print(Repetition(source))
+
