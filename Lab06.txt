@@ -44,7 +44,7 @@ def powerbase(base,power):
 
 print(powerbase(3,2))
 
-
+Task-2
 def binary(num):
     if num==0:
         return 0
@@ -128,7 +128,7 @@ backward(a1.head)
 
 
 
-
+Task-3
 
 def hocBuilder(height):
     if height==0:
