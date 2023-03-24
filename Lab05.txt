@@ -1,0 +1,162 @@
+
+
+# Task-01(Using stack array)
+
+class Overflow(Exception):
+  def __init__(self, message):
+    super()
+class Underflow(Exception):
+  def __init__(self, message):
+    super()
+class StackArray:
+  def __init__(self, string, length):
+    self.string = string
+    self.stack = [None]  * length
+    self.size = -1
+  def push(self, element):
+    if self.size != length - 1:
+      self.size += 1
+      self.stack[self.size] = element
+    else:
+      raise Overflow("Stack Full!")
+  def peek(self):
+    if self.size > -2:
+      return self.stack[self.size]
+    else:
+      raise Underflow("Stack is empty!")
+  def pop(self):
+    if self.size > -2:
+      removedElement = self.stack[self.size]
+      self.stack[self.size] = None
+      self.size -= 1
+      return removedElement
+    else:
+      raise Underflow("Stack is empty!")
+  def parenthesis(self):
+    startingBrackets = "[{("
+    closingBrackets = ")}]"
+    expression = True
+    errorSentence = None
+    sequence = 0
+    countofStartingBrackets = 0
+    for i in self.string:
+      if i in startingBrackets:
+        countofStartingBrackets += 1
+    startingBracketIndex = [None] * countofStartingBrackets
+    indexSBracket = 0
+    for i in self.string:
+      sequence += 1
+      if i in startingBrackets:
+        self.push(i)
+        startingBracketIndex[indexSBracket] = sequence
+        indexSBracket += 1
+      if i in closingBrackets:
+        if self.peek() != None:
+          if i == ")" and self.peek() == "(":
+            self.pop()
+            startingBracketIndex.pop()
+            indexSBracket -= 1
+          elif i == "}" and self.peek() == "{":
+            self.pop()
+            startingBracketIndex.pop()
+            indexSBracket -= 1
+          elif i == "]" and self.peek() == "[":
+            self.pop()
+            startingBracketIndex.pop()
+            indexSBracket -= 1
+          else:
+            expression = False
+        else:
+          expression = False
+          if errorSentence == None:
+            errorSentence = f"{sequence}.'{i}'- not opened"
+    if self.peek() != None:
+      if errorSentence == None:
+        errorSentence = f"{startingBracketIndex[indexSBracket-1]}. '{self.peek()}'- not closed."
+    if expression == True:
+      print("This expression is correct.")
+    else:
+      print("This expression is NOT correct.")
+      print("Error at character #" + errorSentence)          
+given = input()
+length = len(given)
+stack = StackArray(given, length)
+stack.parenthesis()
+
+#Task-02(using stack linked list)
+
+class Node:
+  def __init__(self, element, next):
+    self.element = element
+    self.next = next
+class StackLinkedList:
+  def __init__(self, string, length):
+    self.string = string
+    self.head = None
+
+  def push(self, element):
+    if self.head == None:
+      self.head = Node(element, None)
+    else:
+      n = Node(element, None)
+      n.next = self.head
+      self.head = n
+  def peek(self):
+    if self.head != None:
+      return self.head.element
+  def pop(self):
+    if self.head != None:
+      self.head = self.head.next
+    else:
+      raise Underflow("Stack is empty!")
+  def parenthesis(self):
+    startingBrackets = "[{("
+    closingBrackets = ")}]"
+    expression = True
+    errorSentence = None
+    sequence = 0
+    countofStartingBrackets = 0
+    for i in self.string:
+      if i in startingBrackets:
+        countofStartingBrackets += 1
+    startingBracketIndex = [None] * countofStartingBrackets
+    indexSBracket = 0
+    for i in self.string:
+      sequence += 1
+      if i in startingBrackets:
+        self.push(i)
+        startingBracketIndex[indexSBracket] = sequence
+        indexSBracket += 1
+      if i in closingBrackets:
+        if self.peek() != None:
+          if i == ")" and self.peek() == "(":
+            self.pop()
+            startingBracketIndex.pop()
+            indexSBracket -= 1
+          elif i == "}" and self.peek() == "{":
+            self.pop()
+            startingBracketIndex.pop()
+            indexSBracket -= 1
+          elif i == "]" and self.peek() == "[":
+            self.pop()
+            startingBracketIndex.pop()
+            indexSBracket -= 1
+          else:
+            expression = False
+        else:
+          expression = False
+          if errorSentence == None:
+            errorSentence = f"{sequence}.'{i}'- not opened"
+    if self.peek() != None:
+      if errorSentence == None:
+        errorSentence = f"{startingBracketIndex[indexSBracket-1]}. '{self.peek()}'- not closed."
+    if expression == True:
+      print("This expression is correct.")
+    else:
+      print("This expression is NOT correct.")
+      print("Error at character #" + errorSentence)     
+       
+given = input()
+length = len(given)
+stack = StackLinkedList(given, length)
+stack.parenthesis()
