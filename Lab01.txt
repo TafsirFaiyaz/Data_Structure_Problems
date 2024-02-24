@@ -35,12 +35,14 @@ def ek_ghor_shift(x):
     return x
 
 def rotateLeft(source,k):
+
     if k<0:
         return "invalid input"
     
     else:
         for i in range(k):
             ek_ghor_shift(source)
+
         return source
 
 source=[10,20,30,40,50,60]
@@ -48,7 +50,6 @@ rotateLeft(source,3)
 print(source)
 
 #Task-3
-
 
 def ek_ghor_shift(source):
     for i in range(len(source)-1,0,-1):
