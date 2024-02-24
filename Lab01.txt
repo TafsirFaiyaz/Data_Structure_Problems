@@ -96,12 +96,9 @@ print(source)
 
 #Task-5
 
-
-
 def remove(source,y,idx):
     if idx>len(source)-1:
         return "invalid input"
-    
     
     source[idx]=0
     
@@ -111,12 +108,12 @@ def remove(source,y,idx):
         source[idx]=source[idx+1]
         
         source[idx+1]=temp
+
     return source
 
 source=[10,20,30,40,50,0,0]
 remove(source,5,2)
 print(source)
-
 
 
 #Task-6
