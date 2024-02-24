@@ -223,11 +223,7 @@ def maxbunch(source):
 source= [1, 2, 2, 3, 4, 4, 4]
 print(maxbunch(source))
 
-    
-    
-        
-        
-        
+
 #Task10
 
 def Repetition(source):
@@ -244,7 +240,6 @@ def Repetition(source):
     
     i=0
     
-    
     for j in dic.values():
         temp[i]=j
         i+=1
@@ -255,7 +250,6 @@ def Repetition(source):
                 if temp[val1]==temp[val2]:
                     output=True
                 
-    
     return output
 
 source=[3,4,6,3,4,7,4,6,8,6,6]
