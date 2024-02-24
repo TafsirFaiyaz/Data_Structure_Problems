@@ -118,22 +118,21 @@ print(source)
 
 #Task-6
 
-
-
 def remove(source,idx):
     source[idx]=0
+
     for idx in range(idx,len(source)-1):
         temp=source[idx]
         
         source[idx]=source[idx+1]
         
         source[idx+1]=temp
+
     return source
 
 def removeall(source,size,val):
     count=0
     while count<size:
-        
         
         if source[count]==val:
             
@@ -143,7 +142,6 @@ def removeall(source,size,val):
             
         count+=1
         
-            
     return source
 
 source=[10,2,30,2,50,2,2,0,0]
