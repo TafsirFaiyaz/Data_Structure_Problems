@@ -70,8 +70,6 @@ source=[10,20,30,40,50,60]
 shiftRight(source,3)
 print(source)
 
-
-
 #Taks-4
 def ek_ghor_shift(source):
     
@@ -90,6 +88,7 @@ def rotateRight(source,k):
             ek_ghor_shift(source)
             
         return source
+
 source=[10,20,30,40,50,60]
 rotateRight(source,3)
 print(source)
