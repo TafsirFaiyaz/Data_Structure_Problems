@@ -196,7 +196,6 @@ def Array_series(n):
 print(Array_series(4))
 
 
-
 #Task 9
 
 def maxbunch(source):
@@ -212,9 +211,10 @@ def maxbunch(source):
             if max<count:
                 max=count
                 
-                
         else:
+
             count=1
+
     if len(source)==1:
         max=1
  
