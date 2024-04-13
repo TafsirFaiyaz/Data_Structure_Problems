@@ -83,6 +83,7 @@ def ek_ghor_shift(source):
         temp=source[i-1]
         source[i-1]=source[i]
         source[i]=temp
+
     
 def rotateRight(source,k):
     
