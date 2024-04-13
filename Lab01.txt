@@ -184,6 +184,7 @@ source= [1, 1, 1, 2, 1]
 print(balance(source))
 
 
+
 #task-8
 def Array_series(n):
     
