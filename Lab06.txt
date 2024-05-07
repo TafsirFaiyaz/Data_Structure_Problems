@@ -21,7 +21,6 @@ def fibonaci(n):
 inp=int(input())
 a=[0]*(inp+1)
 
-
 print(fibonaci(inp))
 
 
