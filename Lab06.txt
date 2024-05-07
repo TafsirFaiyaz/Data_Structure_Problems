@@ -23,6 +23,8 @@ a=[0]*(inp+1)
 
 
 print(fibonaci(inp))
+
+
 #Task-1(C)
 
 def printarray(a,i=0):
