@@ -48,13 +48,16 @@ class CircularArray:
     def printBackward(self): #Easy
         
         index=(self.start+self.size-1)%len(self.cir)
+
         for i in range(self.size):
             
             if i==(self.size-1):
                 print(self.cir[index])
             else:
                 print(self.cir[index],end=",")
+
             index-=1
+
             if index<0:
                 index=len(self.cir)-1
     
