@@ -34,11 +34,13 @@ class CircularArray:
     # Print from start index and total size elements
 
     def printForward(self): #Easy
+
         for i in range(self.size):
             index=(self.start+i)%len(self.cir)
             
             if i==(self.size-1):
                 print(self.cir[index])
+
             else:
                 print(self.cir[index],end=",")
             
