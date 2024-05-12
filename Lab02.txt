@@ -5,10 +5,12 @@ class CircularArray:
         self.size = sz
         self.cir = []
         temp=[0]*len(lin)
+
         for i in range(len(temp)):
             index=(st+i)%len(temp)
             temp[index]=lin[i]
         self.cir=self.cir+temp
+
     # if lin = [10, 20, 30, 40, None]
     # then, CircularArray(lin, 2, 4) will generate
     # cir = [40, null, 10, 20, 30]
