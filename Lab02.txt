@@ -62,8 +62,10 @@ class CircularArray:
                 index=len(self.cir)-1
     
     # With no null cells
+
     def linearize(self): #Medium
         temp=[0]*(self.size)
+
         for i in range(len(temp)):
             index=(self.start+i)%len(self.cir)
             temp[i]=self.cir[index]
