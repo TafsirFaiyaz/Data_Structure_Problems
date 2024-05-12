@@ -21,14 +21,18 @@ class CircularArray:
     # Print from index 0 to len(cir) - 1
         
     def printFullLinear(self): #Easy
+
         for i in range(len(self.cir)):
             if i==(len(self.cir)-1):
+
                 print(self.cir[i])
+
             else:
                 print(self.cir[i],end=", ")
         
     
     # Print from start index and total size elements
+
     def printForward(self): #Easy
         for i in range(self.size):
             index=(self.start+i)%len(self.cir)
