@@ -28,6 +28,7 @@ class StackArray:
       return self.stack[self.size]
     else:
       raise Underflow("Stack is empty!")
+
   def pop(self):
     if self.size > -2:
       removedElement = self.stack[self.size]
