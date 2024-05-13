@@ -5,9 +5,11 @@
 class Overflow(Exception):
   def __init__(self, message):
     super()
+
 class Underflow(Exception):
   def __init__(self, message):
     super()
+
 class StackArray:
   def __init__(self, string, length):
     self.string = string
