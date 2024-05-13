@@ -15,12 +15,14 @@ class StackArray:
     self.string = string
     self.stack = [None]  * length
     self.size = -1
+
   def push(self, element):
     if self.size != length - 1:
       self.size += 1
       self.stack[self.size] = element
     else:
       raise Overflow("Stack Full!")
+
   def peek(self):
     if self.size > -2:
       return self.stack[self.size]
