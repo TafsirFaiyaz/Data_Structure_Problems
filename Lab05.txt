@@ -51,8 +51,10 @@ class StackArray:
     for i in self.string:
       if i in startingBrackets:
         countofStartingBrackets += 1
+
     startingBracketIndex = [None] * countofStartingBrackets
     indexSBracket = 0
+
     for i in self.string:
       sequence += 1
       if i in startingBrackets:
