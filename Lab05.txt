@@ -35,8 +35,10 @@ class StackArray:
       self.stack[self.size] = None
       self.size -= 1
       return removedElement
+
     else:
       raise Underflow("Stack is empty!")
+
   def parenthesis(self):
     startingBrackets = "[{("
     closingBrackets = ")}]"
