@@ -57,10 +57,12 @@ class StackArray:
 
     for i in self.string:
       sequence += 1
+
       if i in startingBrackets:
         self.push(i)
         startingBracketIndex[indexSBracket] = sequence
         indexSBracket += 1
+
       if i in closingBrackets:
         if self.peek() != None:
           if i == ")" and self.peek() == "(":
