@@ -65,20 +65,25 @@ class StackArray:
 
       if i in closingBrackets:
         if self.peek() != None:
+
           if i == ")" and self.peek() == "(":
             self.pop()
             startingBracketIndex.pop()
             indexSBracket -= 1
+
           elif i == "}" and self.peek() == "{":
             self.pop()
             startingBracketIndex.pop()
             indexSBracket -= 1
+
           elif i == "]" and self.peek() == "[":
             self.pop()
             startingBracketIndex.pop()
             indexSBracket -= 1
+
           else:
             expression = False
+
         else:
           expression = False
           if errorSentence == None:
