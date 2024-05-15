@@ -133,11 +133,14 @@ class StackLinkedList:
   def peek(self):
     if self.head != None:
       return self.head.element
+
   def pop(self):
     if self.head != None:
       self.head = self.head.next
+
     else:
       raise Underflow("Stack is empty!")
+
   def parenthesis(self):
     startingBrackets = "[{("
     closingBrackets = ")}]"
