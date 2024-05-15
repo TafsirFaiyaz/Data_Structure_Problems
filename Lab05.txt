@@ -121,8 +121,10 @@ class StackLinkedList:
     self.head = None
 
   def push(self, element):
+
     if self.head == None:
       self.head = Node(element, None)
+
     else:
       n = Node(element, None)
       n.next = self.head
