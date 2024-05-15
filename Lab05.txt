@@ -145,9 +145,11 @@ class StackLinkedList:
     startingBrackets = "[{("
     closingBrackets = ")}]"
     expression = True
+
     errorSentence = None
     sequence = 0
     countofStartingBrackets = 0
+
     for i in self.string:
       if i in startingBrackets:
         countofStartingBrackets += 1
