@@ -110,9 +110,11 @@ stack.parenthesis()
 #Task-02(using stack linked list)
 
 class Node:
+
   def __init__(self, element, next):
     self.element = element
     self.next = next
+
 class StackLinkedList:
   def __init__(self, string, length):
     self.string = string
