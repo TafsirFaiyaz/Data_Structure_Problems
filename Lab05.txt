@@ -179,10 +179,12 @@ class StackLinkedList:
             self.pop()
             startingBracketIndex.pop()
             indexSBracket -= 1
+
           elif i == "]" and self.peek() == "[":
             self.pop()
             startingBracketIndex.pop()
             indexSBracket -= 1
+
           else:
             expression = False
         else:
