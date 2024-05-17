@@ -195,10 +195,13 @@ class StackLinkedList:
             errorSentence = f"{sequence}.'{i}'- not opened"
 
     if self.peek() != None:
+
       if errorSentence == None:
         errorSentence = f"{startingBracketIndex[indexSBracket-1]}. '{self.peek()}'- not closed."
+
     if expression == True:
       print("This expression is correct.")
+
     else:
       print("This expression is NOT correct.")
       print("Error at character #" + errorSentence)     
