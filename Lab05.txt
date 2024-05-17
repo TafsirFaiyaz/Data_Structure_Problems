@@ -187,10 +187,13 @@ class StackLinkedList:
 
           else:
             expression = False
+
         else:
           expression = False
+
           if errorSentence == None:
             errorSentence = f"{sequence}.'{i}'- not opened"
+
     if self.peek() != None:
       if errorSentence == None:
         errorSentence = f"{startingBracketIndex[indexSBracket-1]}. '{self.peek()}'- not closed."
