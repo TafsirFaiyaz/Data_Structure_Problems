@@ -55,6 +55,7 @@ class LinkedList:
             return None
         n=self.head
         i=0
+
         while n!=None:
             if i==idx:
                 return n
@@ -84,6 +85,7 @@ class LinkedList:
     # updates the element of the Node at the given index. 
     # Returns the old element that was replaced. For invalid index return None.
     # parameter: index, element
+
     def set(self, idx, elem):
         if idx<0 or idx>=self.countNode():
         
