@@ -30,6 +30,7 @@ class LinkedList:
         return count
     
     # Print elements in the list
+
     def printList(self):
         n=self.head
         count=0
@@ -38,8 +39,10 @@ class LinkedList:
         
             if count==self.countNode()-1:
                 print(n.element)
+
             else:
                 print(n.element,end=",")
+
             n=n.next
             count+=1
         
