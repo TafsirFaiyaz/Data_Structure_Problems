@@ -143,6 +143,7 @@ class DoublyList:
             rem=self.nodeAt(idx)
             pred=self.nodeAt(idx-1)
             pred.next=None
+
             rem.element=None
             rem.next=Node
             rem.prev=None
@@ -151,9 +152,12 @@ class DoublyList:
             rem=self.nodeAt(idx)
             pred=self.nodeAt(idx-1)
             suc=self.nodeAt(idx+1)
+
             pred.next=suc
             suc.prev=pred
             rem.next=None
+
             rem.prev=None
             rem.element=None
+
         return str(z)
