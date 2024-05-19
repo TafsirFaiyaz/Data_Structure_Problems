@@ -94,12 +94,14 @@ class DoublyList:
             return None
 
         if idx==0:
+
             newnode=Node(elem,None,None)
             self.head.prev=newnode
             newnode.next=self.head
             self.head=newnode
 
         elif idx==self.countNode():
+
             newnode=Node(elem,None,None)
             pred=self.nodeAt(idx-1)
             newnode.prev=pred
@@ -110,9 +112,11 @@ class DoublyList:
             newnode=Node(elem,None,None)
             pred=self.nodeAt(idx-1)
             suc=self.nodeAt(idx)
+
             suc.prev=newnode
             newnode.prev=pred
             pred.next=newnode
+
             newnode.next=suc
 
 
