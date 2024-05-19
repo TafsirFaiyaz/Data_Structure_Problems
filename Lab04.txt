@@ -34,6 +34,7 @@ class DoublyList:
         n=self.head
         
         while n!=None:
+
             if n.next==None:
                 print(n.element)
             else:
@@ -127,9 +128,7 @@ class DoublyList:
 	if idx<0 or idx>=self.countNode():
             return None
 
-        z=self.nodeAt(idx).element
-
-        
+        z=self.nodeAt(idx).element        
 
       	if idx==0:
             n=self.head
@@ -138,6 +137,7 @@ class DoublyList:
             self.head.prev=None
             n.next=None
             n.element=None
+
         elif idx==self.countNode()-1:
 
             rem=self.nodeAt(idx)
