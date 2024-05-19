@@ -53,6 +53,7 @@ class DoublyList:
                 print(n.element)
             else:
                 print(n.element,end=",")
+
             count-=1
             n=n.prev
     
@@ -62,6 +63,7 @@ class DoublyList:
 
         n=self.head
         i=0
+
         while n!=None:
             if i==idx:
                 return n
