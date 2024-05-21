@@ -29,6 +29,7 @@ print(fibonaci(inp))
 def printarray(a,i=0):
     if i==len(a):
         return
+
     print(a[i])
     printarray(a,i+1)
 
@@ -40,6 +41,7 @@ printarray(m)
 def powerbase(base,power):
     if power==0:
         return 1
+
     return base*powerbase(base,power-1)
 
 print(powerbase(3,2))
