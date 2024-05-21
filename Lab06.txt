@@ -96,9 +96,6 @@ a1=LinkedList(a)
 print(adder(a1.head))
 
 
-
-
-
 class Node:
   def __init__(self, e, n):
     self.element = e
