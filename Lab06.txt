@@ -129,8 +129,6 @@ a=[1,2,3,4,5]
 a1=LinkedList(a)
 backward(a1.head)
 
-
-
 # Task-3
 
 def hocBuilder(height):
@@ -142,9 +140,6 @@ def hocBuilder(height):
     return 5+hocBuilder(height-1)
 
 print(hocBuilder(10))
-
-
-
 
 
 #TASK-5
@@ -161,10 +156,7 @@ class FinalQ:
         elif investment>100000:
             return 80+self.calcProfit(investment-1000)
     
-        return 45+self.calcProfit(investment-1000)
-
-
-     
+        return 45+self.calcProfit(investment-1000)    
   
 #Tester 
 array=[25000,100000,250000,350000] 
