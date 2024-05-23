@@ -158,9 +158,11 @@ class FinalQ:
     
         return 45+self.calcProfit(investment-1000)    
   
-#Tester 
+#Tester
+
 array=[25000,100000,250000,350000] 
 f = FinalQ() 
+
 f.print(array,0)
 f.print(array,1)
 f.print(array,2)
