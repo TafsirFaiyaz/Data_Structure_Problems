@@ -166,4 +166,5 @@ f = FinalQ()
 f.print(array,0)
 f.print(array,1)
 f.print(array,2)
+
 f.print(array,3)
