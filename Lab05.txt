@@ -103,7 +103,8 @@ class StackArray:
 
     else:
       print("This expression is NOT correct.")
-      print("Error at character #" + errorSentence)          
+      print("Error at character #" + errorSentence)        
+
 
 given = input()
 length = len(given)
