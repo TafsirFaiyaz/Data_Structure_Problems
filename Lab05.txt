@@ -18,16 +18,19 @@ class StackArray:
     if self.size != length - 1:
       self.size += 1
       self.stack[self.size] = element
+
     else:
       raise Overflow("Stack Full!")
 
   def peek(self):
+
     if self.size > -2:
       return self.stack[self.size]
     else:
       raise Underflow("Stack is empty!")
 
   def pop(self):
+
     if self.size > -2:
       removedElement = self.stack[self.size]
       self.stack[self.size] = None
