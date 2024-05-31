@@ -178,6 +178,7 @@ class LinkedList:
   
   # inserts Node containing the given element at the given index
   # Check validity of index.
+
     def insert(self, elem, idx):
         if idx<0 or idx>self.countnode():
             return None
@@ -189,9 +190,11 @@ class LinkedList:
             newNode=Node(elem,self.nodeAt(idx))
             n=self.head
             count=1
+
             while n!=None:
                 if count==idx:
                     n.next=newNode
+
                 n=n.next
                 count+=1
 
