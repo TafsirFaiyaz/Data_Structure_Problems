@@ -113,8 +113,10 @@ class LinkedList:
   # returns the index of the Node containing the given element.
   # if the element does not exist in the List, return -1.
     def indexOf(self, elem):
+
         n=self.head
         i=0
+
         while n!=None:
             if n.element==elem:
                 z=i
@@ -131,6 +133,7 @@ class LinkedList:
     def contains(self, elem):
         n=self.head
         i=0
+
         while n!=None:
             if n.element==elem:
                 return True
@@ -146,6 +149,7 @@ class LinkedList:
         temp=self.head
         newhead=Node(temp.element,None)
         newtail=newhead
+
         for i in range(1,self.countNode()):
             
             n=Node(temp.next.element,None)
@@ -158,6 +162,7 @@ class LinkedList:
 
   # Makes a reversed copy of the given List. Returns the head reference of the reversed list.
     def reverseList(self):
+
         newhead=Node((self.nodeAt(self.countNode()-1)).element,None)
         tail=newhead
         
@@ -166,13 +171,9 @@ class LinkedList:
             
             tail.next=n
             tail=n
+
         return newhead
         
-    
-
-    
-
- 
   
   # inserts Node containing the given element at the given index
   # Check validity of index.
