@@ -50,6 +50,7 @@ class StackArray:
     countofStartingBrackets = 0
 
     for i in self.string:
+
       if i in startingBrackets:
         countofStartingBrackets += 1
 
@@ -88,6 +89,7 @@ class StackArray:
         else:
 
           expression = False
+
           if errorSentence == None:
             errorSentence = f"{sequence}.'{i}'- not opened"
 
