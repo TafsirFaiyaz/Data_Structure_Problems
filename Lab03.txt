@@ -200,6 +200,7 @@ class LinkedList:
 
   # removes Node at the given index. returns element of the removed node.
   # Check validity of index. return None if index is invalid.
+
     def remove(self, idx):
         if idx<0 or idx>=self.countnode():
             return None
@@ -212,25 +213,27 @@ class LinkedList:
         else:
             n=self.head
             count=0
+
             while count!=idx:
                 if count==(idx-1):
                     z=n.next.element
                     n.next=n.next.next
                     return z
+
                 n=n.next
                 count+=1
   
   # Rotates the list to the left by 1 position.
+
     def rotateLeft(self):
-        h=self.head
-    
+
+        h=self.head   
         z=self.head.next
         self.head.next=None
+
         self.head=z
         self.nodeAt(self.countNode()-1).next=h
-        self.head=z
-    
-        
+        self.head=z    
     
         return self.head
         
@@ -238,10 +241,12 @@ class LinkedList:
   
   # Rotates the list to the right by 1 position.
     def rotateRight(self):
+
         h=self.head
         z=self.nodeAt(self.countNode()-1)
         self.nodeAt(self.countNode()-2).next=None
         
         self.head=z
         self.head.next=h
+
         return self.head
