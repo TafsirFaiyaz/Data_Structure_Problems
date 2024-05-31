@@ -51,8 +51,7 @@ class LinkedList:
 
             n=n.next
             count+=1
-        
-        
+              
       
     # returns the reference of the Node at the given index. For invalid index return None.
     def nodeAt(self, idx):
@@ -112,6 +111,7 @@ class LinkedList:
       
   # returns the index of the Node containing the given element.
   # if the element does not exist in the List, return -1.
+
     def indexOf(self, elem):
 
         n=self.head
@@ -130,6 +130,7 @@ class LinkedList:
       
   
   # returns true if the element exists in the List, return false otherwise.
+
     def contains(self, elem):
         n=self.head
         i=0
