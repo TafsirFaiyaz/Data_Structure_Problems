@@ -83,6 +83,8 @@ class LinkedList:
     else:
       self.head=a
 
+
+
 #Task-2(c)
 
 class Node:
@@ -116,6 +118,9 @@ a=[1,2,3,4,5]
 a1=LinkedList(a)
 backward(a1.head)
 
+
+
+
 # Task-3
 
 def hocBuilder(height):
@@ -127,6 +132,55 @@ def hocBuilder(height):
     return 5+hocBuilder(height-1)
 
 print(hocBuilder(10))
+
+
+
+#Task-4(a)
+
+def pattern(n,j=1):
+    if n==1:
+        return
+    print(j,end="")
+    pattern(n-1,j+1)
+
+def caller(n,i=1):
+    if i==n+1:
+        return
+    pattern(i+1)
+    print()
+    caller(n,i+1)
+
+row=int(input())    
+caller(row)
+
+
+#Task-4(b)
+
+
+def pattern(n,j=1):
+    if n==1:
+        return
+    print(j,end="")
+    pattern(n-1,j+1)
+
+def space(n):
+    if n<=0:
+        return 
+    
+    print(" ",end="")
+    space(n-1)
+
+def caller(n,i=1):
+    if i==n+1:
+        return
+    space(n-i)
+    pattern(i+1)
+    print()
+    caller(n,i+1)
+
+row=int(input())
+caller(row)
+
 
 
 #TASK-5
