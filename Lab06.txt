@@ -37,7 +37,8 @@ m=[1,2,3,4,5]
 printarray(m)
 
 
-#Task 1(d)
+
+#Task 1(D)
 def powerbase(base,power):
     if power==0:
         return 1
