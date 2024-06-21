@@ -149,6 +149,7 @@ def pattern(n,j=1):
 def caller(n,i=1):
     if i==n+1:
         return
+
     pattern(i+1)
     print()
     caller(n,i+1)
