@@ -60,6 +60,8 @@ def binary(num):
     
 binary(16)
 
+
+
 #Task-2(b)
 
 class Node:
