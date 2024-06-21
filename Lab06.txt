@@ -117,10 +117,10 @@ def backward(a1):
         return
     backward(a1.next)
     print(a1.element)
+
 a=[1,2,3,4,5]
 a1=LinkedList(a)
 backward(a1.head)
-
 
 
 
